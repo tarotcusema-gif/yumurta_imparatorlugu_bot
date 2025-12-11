@@ -1,7 +1,7 @@
 import logging
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
 
-TOKEN = "BURAYA_BOT_TOKENİNİ_YAZ"  # BotFather’dan aldığın token
+TOKEN = "8559279808:AAE4G8mi13SkQscL-zjkjPsfDKFBSI5UF9o"
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
