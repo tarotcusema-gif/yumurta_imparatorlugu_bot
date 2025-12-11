@@ -1,18 +1,19 @@
 import logging
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
+import os
+from telegram.ext import ApplicationBuilder, CommandHandler
 
-TOKEN = "8559279808:AAE4G8mi13SkQscL-zjkjPsfDKFBSI5UF9o"
+TOKEN = os.getenv("BOT_TOKEN")
 
 logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
 
 async def start(update, context):
-    await update.message.reply_text("🍳 Yumurta İmparatorluğu Botu Aktif!")
+    await update.message.reply_text("Bot çalışıyor! 🥚")
 
 async def help_cmd(update, context):
-    await update.message.reply_text("Komutlar:\n/start - Botu başlat")
+    await update.message.reply_text("Bu bir test yardım komutudur.")
 
 def main():
     app = ApplicationBuilder().token(TOKEN).build()
@@ -22,5 +23,5 @@ def main():
 
     app.run_polling()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
